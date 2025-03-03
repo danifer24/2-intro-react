@@ -1,4 +1,11 @@
-export function HelloWorld(){
+import { Fragment } from "react";
+export const HelloWorld = ({user, id}) => {
+//   const name = "Pepe";
 
-    return <div>Hola Mundo</div>
+  return (
+    <Fragment>
+      <h1>Hola Mundo</h1>
+      <div>que tal {user} con el id {id}</div>
+    </Fragment>
+  );
 }
