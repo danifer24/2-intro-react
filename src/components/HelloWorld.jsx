@@ -1,11 +1,21 @@
-import { Fragment } from "react";
-export const HelloWorld = ({user, id}) => {
-//   const name = "Pepe";
+import PropTypes from "prop-types";
+export const HelloWorld = ({ user, id, title = "Hola Mundo" }) => {
+  //   const name = "Pepe";
+
+  console.log(title);
 
   return (
-    <Fragment>
-      <h1>Hola Mundo</h1>
-      <div>que tal {user} con el id {id}</div>
-    </Fragment>
+    <>
+      <h1>{title}</h1>
+      <div>
+        que tal {user.name} {user.lastname} con el id {id}
+      </div>
+    </>
   );
+}
+
+HelloWorld.propTypes = {
+  title: PropTypes.boolean,
+  user: PropTypes.object
+
 }
