@@ -1,13 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { HelloWorld } from './components/HelloWorld'
+import { HelloWorldApp } from './HelloWorldApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HelloWorld
+    <HelloWorldApp
      user ={ { name: 'Pepe', lastname: 'Fernández'} } 
      id = { 1 }
-     title = { 'Hello World' }
      />
   </React.StrictMode>,
 )
